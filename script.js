@@ -14,6 +14,18 @@ for(let i = 0; i < 300; i++){
     temp.innerText = i; 
     temp.style.minWidth = "100px"; temp.style.minHeight = "100px";
     temp.style.borderRadius = "6px";
-    temp.style.textWrap = "flexwrap"; anchor.appendChild(temp);
+    temp.style.textWrap = "flexwrap"; 
+    temp.addEventListener("mouseenter", ()=>{
+        temp.style.borderWidth = "10px";
+        temp.style.maxWidth = "120px"; temp.style.maxHeight = "120px";
+       temp.style.minWidth = "120px"; temp.style.minHeight = "120px";
+    });
+    temp.addEventListener("mouseleave",()=>{
+        temp.style.borderWidth = "6px";
+        temp.style.minWidth = "100px"; temp.style.minHeight = "100px";
+        temp.style.maxWidth = "100px"; temp.style.maxHeight = "100px";
+    }
+    );
+    anchor.appendChild(temp);
     container.appendChild(anchor);
 }
