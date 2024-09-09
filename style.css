@@ -18,9 +18,6 @@
  max-width: 100vw;
     
 }
-#container:hover{
-    
-}
 button{
     border: 4px solid rgb(73, 72, 72);
     min-width: 100px; min-height: 100px;
@@ -29,6 +26,15 @@ button{
 }
 button:hover{
     transform: scale(1.1);background-color: rgb(247, 247, 204);
+}
+.special:hover{
+    background-color: rgb(158, 122, 60);
+}
+.specialBox:hover{
+    background-color: rgb(125, 219, 150);
+}
+.specialButton:hover{
+    background-color: rgb(78, 230, 78);
 }
 body{
     border: 5px solid black;
