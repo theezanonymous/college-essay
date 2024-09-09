@@ -4,7 +4,7 @@ for(let i = 0; i < 300; i++){
     const anchor = document.createElement("a");
     anchor.className = "special";
     if(i !=82){
-        anchor.href = "https://media.tenor.com/OA8KFcZxPjsAAAAi/sad-emoji.gif";
+        anchor.href = "sad-emoji.gif";
     }
     else{
         anchor.className = "specialBox";
