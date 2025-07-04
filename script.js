@@ -1,22 +1,24 @@
-const container = document.querySelector("#container");
-const birthday = undefined;
-for(let i = 0; i < 300; i++){
-    const anchor = document.createElement("a");
-    anchor.className = "special";
-    if(i !=82){
-        anchor.href = "sad-emoji.gif";
+function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+  
+// "https://docs.google.com/document/d/1-PfKjXNivt9IfgtF1qrTzlwlC2x_47l6mDv8yLNnc4s/edit?usp=sharing";
+let btn = document.querySelector(".submit")
+btn.addEventListener("click", async ()=>{
+    btn.id = ""; btn.innerText = "Enter!"
+    let bday = document.querySelector("#birthday").value;
+    btn.id = "thinking"; btn.innerText = "...";
+    await delay(5000);
+    if(bday=="2007-08-02"){
+        btn.id = "right"
+        btn.innerText = "RIGHT!!"
+        delay(4000);
+        window.location.href = "https://docs.google.com/document/d/1-PfKjXNivt9IfgtF1qrTzlwlC2x_47l6mDv8yLNnc4s/edit?usp=sharing";
     }
     else{
-        anchor.className = "specialBox";
-        anchor.href = "https://docs.google.com/document/d/1-PfKjXNivt9IfgtF1qrTzlwlC2x_47l6mDv8yLNnc4s/edit?usp=sharing";
+        btn.id = "wrong"
+        btn.innerText = "WRONG!!"
     }
-    const temp = document.createElement("button");
-    temp.style.color = "black"; temp.style.fontWeight = 1000;
-    if(i==82){
-    temp.className = "specialButton";}
 
-    temp.innerText = i; 
-    temp.style.textWrap = "flexwrap"; 
-    anchor.appendChild(temp);
-    container.appendChild(anchor);
-}
+    
+})
