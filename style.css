@@ -97,3 +97,18 @@ input{
 
     }
 }
+img{
+    position: absolute;  width: 40vw;
+    margin-left: 30vw; margin-right: 30vw;
+    transition: 3s ease-in-out; 
+    transition-delay: 1s;
+    display: block;
+}
+img.show{
+    scale: 1.5;
+    opacity: 100; 
+}
+img.hide{
+    opacity: 0;
+    scale: 0.1;
+}
